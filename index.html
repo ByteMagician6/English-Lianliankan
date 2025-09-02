@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语单词连连看</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>英语单词连连看</h1>
+        
+        <div class="game-info">
+            <div class="score-container">
+                <span>得分: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="timer-container">
+                <span>时间: </span>
+                <span id="timer">60</span>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <!-- 游戏卡片将通过JavaScript动态生成 -->
+        </div>
+        
+        <div class="game-controls">
+            <button id="start-btn" class="btn-primary">开始游戏</button>
+            <button id="reset-btn" class="btn-secondary" disabled>重置游戏</button>
+            <button id="edit-btn" class="btn-secondary">编辑单词</button>
+        </div>
+    </div>
+    
+    <!-- 编辑单词的模态框 -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>编辑单词库</h2>
+            <div class="word-list">
+                <!-- 单词列表将通过JavaScript动态生成 -->
+            </div>
+            <div class="add-word">
+                <input type="text" id="new-english" placeholder="英文单词">
+                <input type="text" id="new-chinese" placeholder="中文释义">
+                <button id="add-btn" class="btn-primary">添加</button>
+            </div>
+            <button id="save-btn" class="btn-primary">保存</button>
+        </div>
+    </div>
+    
+    <!-- 游戏结束的模态框 -->
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="game-over-title">游戏结束</h2>
+            <p id="game-over-message">再接再厉！</p>
+            <button id="play-again-btn" class="btn-primary">再玩一次</button>
+        </div>
+    </div>
+</body>
+</html>
